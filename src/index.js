@@ -1,13 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { StoreProvider } from "./Store";
 import Routes from "./Routes";
+import ReactDOM from 'react-dom/client';
 
-ReactDOM.render(
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <StoreProvider>
     <Routes />
   </StoreProvider>,
-  document.getElementById("root")
 );
