@@ -98,13 +98,7 @@ export default function PrimarySearchAppBar() {
 
           <div className={classes.grow} />
           <Link to="/" className={classes.link}>
-            <Button color="inherit">Home</Button>
-          </Link>
-          <Link to="/modeler" className={classes.link}>
             <Button color="inherit">Modeler</Button>
-          </Link>
-          <Link to="/framework" className={classes.link}>
-            <Button color="inherit">Framework</Button>
           </Link>
         </Toolbar>
       </AppBar>

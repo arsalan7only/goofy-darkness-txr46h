@@ -18,9 +18,9 @@ class BpmnModelerComponent extends Component {
       keyboard: {
         bindTo: window
       },
-      propertiesPanel: {
-        parent: "#propview"
-      },
+      // propertiesPanel: {
+      //   parent: "#propview"
+      // },
       additionalModules: [propertiesPanelModule, propertiesProviderModule],
       moddleExtensions: {
         camunda: camundaModdleDescriptor
@@ -90,8 +90,8 @@ class BpmnModelerComponent extends Component {
           id="bpmnview"
           style={{ width: "75%", height: "98vh", float: "left" }}
         ></div>
-        <div style={{ position: "absolute", bottom: "10px", right: "10px" }}>
-          <button onClick={this.saveBpmnDiagram} style={{ marginRight: "10px" }}>
+        <div style={{ position: "absolute", top: "90px", right: "0" }}>
+          <button onClick={this.saveBpmnDiagram} style={{ marginRight: "10px",  padding:"10px ", width:"100px", backgroundColor:"#007bff", color:"white", border:"none", borderRadius:"5px"}}>
             Save
           </button>
           <input
@@ -99,6 +99,7 @@ class BpmnModelerComponent extends Component {
             accept=".bpmn"
             onChange={this.handleFileUpload}
             style={{ display: "inline-block" }}
+            placeholder="Upload BPMN file"
           />
         </div>
       </div>
